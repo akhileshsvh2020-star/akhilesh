@@ -30,7 +30,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 API_SECRET_KEY = os.getenv("API_SECRET_KEY")
 ALLOWED_ORIGINS = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "http://localhost:5173").split(",")]
 HOST            = os.getenv("HOST", "0.0.0.0")
-PORT            = int(os.getenv("PORT", "8000"))
+PORT            = int(os.getenv("SERVER_PORT", os.getenv("PORT", "8000")))
 MAX_FILE_SIZE_MB = int(os.getenv("MAX_FILE_SIZE_MB", "50"))
 MAX_PAGE_COUNT   = int(os.getenv("MAX_PAGE_COUNT", "100"))
 
